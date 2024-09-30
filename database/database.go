@@ -21,7 +21,7 @@ func ConnectToMongoDB() (*mongo.Client, error) {
 	defer cancel()
 
 	tlsConfig := &tls.Config{
-		InsecureSkipVerify: true, // Only use this for testing! Remove in production.
+		InsecureSkipVerify: true,
 	}
 
 	clientOptions := options.Client().ApplyURI(uri).
