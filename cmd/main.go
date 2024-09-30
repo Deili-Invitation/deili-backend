@@ -23,7 +23,7 @@ func isAllowedOrigin(origin string) bool {
 	}
 
 	allowedOrigins := []string{
-		"your-frontend.vercel.app",
+		"evelynandbenhard.vercel.app",
 		"localhost:3000",
 	}
 
