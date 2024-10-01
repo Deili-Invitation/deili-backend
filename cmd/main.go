@@ -17,6 +17,7 @@ import (
 func isAllowedOrigin(origin string) bool {
 	allowedOrigins := []string{
 		"https://evelynandbenhard.vercel.app",
+		"https://evelynandbenhard.deiliinvitation.com",
 		"http://localhost:3000",
 		"https://localhost:3000",
 	}
@@ -37,7 +38,7 @@ func main() {
 	api.RegisterRoutes(r)
 
 	corsMiddleware := handlers.CORS(
-		handlers.AllowedOrigins([]string{"https://evelynandbenhard.vercel.app", "http://localhost:3000", "https://deiliinvitation.com", ".deiliinvitation.com"}),
+		handlers.AllowedOrigins([]string{"https://evelynandbenhard.vercel.app", "http://localhost:3000", "https://deiliinvitation.com", ".deiliinvitation.com", "https://evelynandbenhard.deiliinvitation.com"}),
 		handlers.AllowedMethods([]string{"GET", "POST", "PUT", "DELETE", "OPTIONS"}),
 		handlers.AllowedHeaders([]string{"Content-Type", "Authorization"}),
 		handlers.AllowCredentials(),
